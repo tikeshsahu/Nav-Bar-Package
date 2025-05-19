@@ -1,0 +1,19 @@
+# Build files and directories
+build/
+**/build/
+example/build/
+.dart_tool/
+.packages
+pubspec.lock
+
+# macOS system files
+.DS_Store
+
+# IDE files
+.idea/
+*.iml
+
+# Specifically exclude the files mentioned in the validation error
+example/build/app/intermediates/compile_and_runtime_not_namespaced_r_class_jar/debug/R.jar
+example/build/app/intermediates/processed_res/debug/out/output-metadata.json
+example/build/app/intermediates/symbol_list_with_package_name/debug/package-aware-r.txt 
