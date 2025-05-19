@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:navigation_bar_example/home_page.dart';
+import 'package:custom_nav_bar_example/home_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,8 +20,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
-
-
-
-

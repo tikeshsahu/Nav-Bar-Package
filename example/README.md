@@ -1,6 +1,6 @@
 # Navigation Bar Example
 
-A simple example app showing how to use the `navigation_bar` package.
+A simple example app showing how to use the `customized_nav` package.
 
 ## Getting Started
 
@@ -21,11 +21,11 @@ flutter run
 
 ## Components Used
 
-The example uses the following components from the `navigation_bar` package:
+The example uses the following components from the `customized_nav` package:
 
-- `CustomNavBar`: The main navigation bar widget
-- `CustomNavBarItem`: Represents an item in the navigation bar
-- `CustomNavBarController`: Manages the state of the navigation bar
+- `CustomizedNavBar`: The main navigation bar widget
+- `CustomizedNavItem`: Represents an item in the navigation bar
+- `CustomizedNavController`: Manages the state of the navigation bar
 
 ## Implementation
 

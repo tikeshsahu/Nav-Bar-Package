@@ -18,7 +18,7 @@ Add this to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  custom_nav_bar: ^0.1.0
+  customized_nav: ^0.1.0
 ```
 
 Then run:
@@ -32,7 +32,7 @@ flutter pub get
 ### Basic Example
 
 ```dart
-import 'package:custom_nav_bar/custom_nav_bar.dart';
+import 'package:customized_nav/customized_nav.dart';
 import 'package:flutter/material.dart';
 
 class MyHomePage extends StatefulWidget {
@@ -49,14 +49,30 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Center(
         child: Text('Selected tab: $_selectedIndex'),
       ),
-      bottomNavigationBar: CustomNavBar(
+      bottomNavigationBar: CustomizedNavBar(
         items: [
-          NavBarItem(icon: Icons.home, label: 'Home'),
-          NavBarItem(icon: Icons.search, label: 'Search'),
-          NavBarItem(icon: Icons.person, label: 'Profile'),
-          NavBarItem(icon: Icons.settings, label: 'Settings'),
+          CustomizedNavItem.withIcons(
+            title: 'Home',
+            activeIcon: Icons.home,
+            inactiveIcon: Icons.home_outlined,
+          ),
+          CustomizedNavItem.withIcons(
+            title: 'Search',
+            activeIcon: Icons.search,
+            inactiveIcon: Icons.search_outlined,
+          ),
+          CustomizedNavItem.withIcons(
+            title: 'Profile',
+            activeIcon: Icons.person,
+            inactiveIcon: Icons.person_outlined,
+          ),
+          CustomizedNavItem.withIcons(
+            title: 'Settings',
+            activeIcon: Icons.settings,
+            inactiveIcon: Icons.settings_outlined,
+          ),
         ],
-        selectedIndex: _selectedIndex,
+        initialSelectedIndex: _selectedIndex,
         onItemSelected: (index) {
           setState(() {
             _selectedIndex = index;

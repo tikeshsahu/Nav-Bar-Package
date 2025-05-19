@@ -1,4 +1,4 @@
-package com.navbar.package
+package com.navbar.app
 
 import io.flutter.embedding.android.FlutterActivity
 

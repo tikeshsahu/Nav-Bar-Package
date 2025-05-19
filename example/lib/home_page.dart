@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:navigation_bar_example/basic_example.dart';
-import 'package:navigation_bar_example/style_example.dart';
+import 'package:custom_nav_bar_example/basic_example.dart';
+import 'package:custom_nav_bar_example/style_example.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});

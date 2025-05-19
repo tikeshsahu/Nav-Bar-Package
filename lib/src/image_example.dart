@@ -1,9 +1,7 @@
-// File: example/lib/image_example.dart
-
 import 'package:flutter/material.dart';
-import 'package:navigation_bar/src/custom_nav_bar_controller.dart';
-import 'package:navigation_bar/src/custom_nav_bar_item.dart';
-import 'package:navigation_bar/src/custom_nav_bar_widget.dart';
+import 'customized_nav_controller.dart';
+import 'customized_nav_item.dart';
+import 'customized_nav_widget.dart';
 
 class ImageNavBarExample extends StatefulWidget {
   const ImageNavBarExample({super.key});
@@ -14,7 +12,7 @@ class ImageNavBarExample extends StatefulWidget {
 
 class _ImageNavBarExampleState extends State<ImageNavBarExample> {
   int _selectedIndex = 0;
-  final _controller = CustomNavBarController();
+  final _controller = CustomizedNavController();
 
   // Example pages to display based on selected tab
   final List<Widget> _pages = [
@@ -47,7 +45,7 @@ class _ImageNavBarExampleState extends State<ImageNavBarExample> {
         title: const Text('Image Navigation Bar Example'),
       ),
       body: _pages[_selectedIndex],
-      bottomNavigationBar: CustomNavBar(
+      bottomNavigationBar: CustomizedNavBar(
         controller: _controller,
         onItemSelected: (index) {
           // Controller already handles the state change
@@ -59,28 +57,28 @@ class _ImageNavBarExampleState extends State<ImageNavBarExample> {
         unselectedItemColor: Colors.grey,
         items: [
           // Example 1: Using PNG images
-          CustomNavBarItem.withImages(
+          CustomizedNavItem.withImages(
             title: 'Home',
             activeImagePath: 'assets/images/home_active.png',
             inactiveImagePath: 'assets/images/home_inactive.png',
           ),
 
           // Example 2: Using built-in Icons
-          CustomNavBarItem.withIcons(
+          CustomizedNavItem.withIcons(
             title: 'Search',
             activeIcon: Icons.search,
             inactiveIcon: Icons.search_outlined,
           ),
 
           // Example 3: Using SVG icons
-          CustomNavBarItem.withSvg(
+          CustomizedNavItem.withSvg(
             title: 'Favorites',
             activeSvgPath: 'assets/icons/heart_filled.svg',
             inactiveSvgPath: 'assets/icons/heart_outline.svg',
           ),
 
           // Example 4: Using JPG with custom container styling
-          CustomNavBarItem.withWidgets(
+          CustomizedNavItem.withWidgets(
             title: 'Profile',
             activeIcon: Container(
               padding: const EdgeInsets.all(2),

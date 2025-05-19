@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:navigation_bar/navigation_bar.dart';
-import 'package:navigation_bar_example/demo_page.dart';
+import 'package:customized_nav/customized_nav.dart';
 
+import 'demo_page.dart';
 
 class BasicExample extends StatefulWidget {
   const BasicExample({super.key});
@@ -12,7 +12,7 @@ class BasicExample extends StatefulWidget {
 
 class _BasicExampleState extends State<BasicExample> {
   int _selectedIndex = 0;
-  final _controller = CustomNavBarController();
+  final _controller = CustomizedNavController();
 
   // Example pages to display based on selected tab
   final List<Widget> _pages = [
@@ -45,7 +45,7 @@ class _BasicExampleState extends State<BasicExample> {
         title: const Text('Basic Navigation Bar Example'),
       ),
       body: _pages[_selectedIndex],
-      bottomNavigationBar: CustomNavBar(
+      bottomNavigationBar: CustomizedNavBar(
         controller: _controller,
         onItemSelected: (index) {
           // Controller already handles the state change
@@ -56,22 +56,22 @@ class _BasicExampleState extends State<BasicExample> {
         selectedItemColor: Colors.blue,
         unselectedItemColor: Colors.grey,
         items: [
-          CustomNavBarItem.withIcons(
+          CustomizedNavItem.withIcons(
             title: 'Home',
             activeIcon: Icons.home,
             inactiveIcon: Icons.home_outlined,
           ),
-          CustomNavBarItem.withIcons(
+          CustomizedNavItem.withIcons(
             title: 'Search',
             activeIcon: Icons.search,
             inactiveIcon: Icons.search_outlined,
           ),
-          CustomNavBarItem.withIcons(
+          CustomizedNavItem.withIcons(
             title: 'Alerts',
             activeIcon: Icons.notifications,
             inactiveIcon: Icons.notifications_outlined,
           ),
-          CustomNavBarItem.withIcons(
+          CustomizedNavItem.withIcons(
             title: 'Settings',
             activeIcon: Icons.settings,
             inactiveIcon: Icons.settings_outlined,

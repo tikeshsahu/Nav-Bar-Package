@@ -1,6 +1,6 @@
+import 'package:customized_nav/customized_nav.dart';
 import 'package:flutter/material.dart';
-import 'package:navigation_bar/navigation_bar.dart';
-import 'package:navigation_bar_example/demo_page.dart';
+import 'package:custom_nav_bar_example/demo_page.dart';
 
 class StylesExample extends StatefulWidget {
   const StylesExample({super.key});
@@ -11,7 +11,7 @@ class StylesExample extends StatefulWidget {
 
 class _StylesExampleState extends State<StylesExample> {
   int _selectedIndex = 0;
-  final _controller = CustomNavBarController();
+  final _controller = CustomizedNavController();
 
   // Example pages to display based on selected tab
   final List<Widget> _pages = [
@@ -44,7 +44,7 @@ class _StylesExampleState extends State<StylesExample> {
         title: const Text('Styled Icons Example'),
       ),
       body: _pages[_selectedIndex],
-      bottomNavigationBar: CustomNavBar(
+      bottomNavigationBar: CustomizedNavBar(
         controller: _controller,
         onItemSelected: (index) {
           // Controller already handles the state change
@@ -56,21 +56,21 @@ class _StylesExampleState extends State<StylesExample> {
         unselectedItemColor: Colors.grey,
         items: [
           // Example 1: Simple icon variant
-          CustomNavBarItem.withIcons(
+          CustomizedNavItem.withIcons(
             title: 'Home',
             activeIcon: Icons.home,
             inactiveIcon: Icons.home_outlined,
           ),
 
           // Example 2: Different icon style
-          CustomNavBarItem.withIcons(
+          CustomizedNavItem.withIcons(
             title: 'Search',
             activeIcon: Icons.search,
             inactiveIcon: Icons.search_outlined,
           ),
 
           // Example 3: Using custom widget for more control
-          CustomNavBarItem.withWidgets(
+          CustomizedNavItem.withWidgets(
             title: 'Favorites',
             activeIcon: const Icon(
               Icons.favorite,
@@ -83,7 +83,7 @@ class _StylesExampleState extends State<StylesExample> {
           ),
 
           // Example 4: Using custom container with an icon
-          CustomNavBarItem.withWidgets(
+          CustomizedNavItem.withWidgets(
             title: 'Profile',
             activeIcon: Container(
               padding: const EdgeInsets.all(2),

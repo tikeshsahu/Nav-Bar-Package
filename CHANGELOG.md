@@ -1,6 +1,6 @@
 ## 0.0.1
 
-- Initial release of the navigation_bar package
+- Initial release of the customized_nav package
 - Features implemented:
   - Customizable bottom navigation bar for Flutter applications
   - Support for different icon types (IconData, SVG, or custom widgets)
