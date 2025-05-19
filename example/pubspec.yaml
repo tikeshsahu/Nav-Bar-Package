@@ -1,0 +1,23 @@
+name: navigation_bar_example
+description: "Example app for the navigation_bar package"
+version: 0.0.1
+publish_to: "none"
+
+environment:
+  sdk: ^3.5.3
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  navigation_bar:
+    path: ../
+  cupertino_icons: ^1.0.6
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true

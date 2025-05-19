@@ -1,0 +1,1 @@
+ /Users/mobileworldm1/packages/navigation_bar/example/.dart_tool/flutter_build/319b375b67b445ee364c39670cc92bc1/native_assets.yaml: 
