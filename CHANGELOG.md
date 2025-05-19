@@ -1,3 +1,10 @@
 ## 0.0.1
 
-* TODO: Describe initial release.
+- Initial release of the navigation_bar package
+- Features implemented:
+  - Customizable bottom navigation bar for Flutter applications
+  - Support for different icon types (IconData, SVG, or custom widgets)
+  - Indicator line for the selected item with customizable appearance
+  - Custom controller for managing navigation state
+  - Various examples demonstrating different usage patterns
+  - Responsive design that adapts to different screen sizes
